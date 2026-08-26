@@ -1,0 +1,80 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.5.10/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"level": "on",
+					"options": {
+						"groups": [{ "type": false }, ":BLANK_LINE:"]
+					}
+				}
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"domains": {
+			"project": "all",
+			"types": "all"
+		},
+		"rules": {
+			"correctness": {
+				"useImportExtensions": {
+					"level": "error",
+					"options": {
+						"forceJsExtensions": false
+					}
+				}
+			},
+			"style": {
+				"useConsistentCurlyBraces": "error",
+				"useImportType": {
+					"level": "error",
+					"options": {
+						"style": "separatedType"
+					}
+				}
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"semicolons": "asNeeded"
+		}
+	},
+	"json": {
+		"parser": {
+			"allowComments": true,
+			"allowTrailingCommas": true
+		}
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "trunk"
+	},
+	"overrides": [
+		{
+			"includes": [".vscode/*.json", "**/tsconfig.*.json", "**/tsconfig.json"],
+			"json": {
+				"formatter": {
+					"trailingCommas": "all"
+				}
+			}
+		},
+		{
+			"includes": ["**/package.json"],
+			"json": {
+				"formatter": {
+					"indentStyle": "space"
+				}
+			}
+		}
+	]
+}

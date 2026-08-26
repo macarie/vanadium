@@ -1,0 +1,30 @@
+{
+	"include": ["source"],
+	"compilerOptions": {
+		"noEmit": true,
+
+		"allowJs": false,
+
+		"module": "nodenext",
+		"moduleDetection": "force",
+		"moduleResolution": "nodenext",
+		"target": "esnext",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+
+		"allowImportingTsExtensions": true,
+		"erasableSyntaxOnly": true,
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
+
+		"skipLibCheck": true,
+
+		"strict": true,
+		"allowUnreachableCode": false,
+		"noImplicitOverride": true,
+		"noUncheckedIndexedAccess": true,
+		"noUncheckedSideEffectImports": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+	},
+}
