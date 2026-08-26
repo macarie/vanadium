@@ -1,5 +1,4 @@
 {
-	"include": ["source"],
 	"compilerOptions": {
 		"noEmit": true,
 
