@@ -4,6 +4,21 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check.types": "tsc"
+    "dev": "wrangler dev",
+    "db.generate": "drizzle-kit generate",
+    "db.migrate": "drizzle-kit migrate",
+    "check.types": "pnpm run generate.types && tsc",
+    "generate.types": "wrangler types --env-interface CFBindings && sed -E -i '' 's|DurableObjectNamespace (/\\* Playwright_v[0-9]+_[0-9]+_[0-9]+ \\*/;)|DurableObjectNamespace<Container<CFBindings>> \\1|' worker-configuration.d.ts"
+  },
+  "dependencies": {
+    "@cloudflare/containers": "^0.3.7",
+    "@hono/standard-validator": "^0.4.0",
+    "drizzle-orm": "1.0.0-rc.4",
+    "hono": "^4.13.4",
+    "valibot": "^1.4.2"
+  },
+  "devDependencies": {
+    "drizzle-kit": "1.0.0-rc.4",
+    "wrangler": "^4.126.0"
   }
 }

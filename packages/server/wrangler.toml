@@ -1,0 +1,132 @@
+"$schema" = "./node_modules/wrangler/config-schema.json"
+
+name = "vanadium"
+main = "source/@mod.ts"
+compatibility_date = "2026-08-27"
+workers_dev = false
+
+compatibility_flags = [ "no_nodejs_compat", "no_nodejs_compat_v2" ]
+
+[vars]
+KEY_BYTES = 32
+
+[secrets]
+required = [ "ROOT_KEY" ]
+
+[[d1_databases]]
+binding = "keys"
+database_name = "keys"
+migrations_dir = "drizzle"
+migrations_pattern = "drizzle/*/migration.sql"
+
+[[containers]]
+image = "./dockerfile"
+class_name = "Playwright_v1_62_0"
+name = "Playwright_v1_62_0"
+  [containers.image_vars]
+  PLAYWRIGHT_VERSION = "1.62.0"
+
+[[durable_objects.bindings]]
+name = "PLAYWRIGHT_1_62_0"
+class_name = "Playwright_v1_62_0"
+
+[exports.Playwright_v1_62_0]
+type = "durable-object"
+container = "Playwright_v1_62_0"
+storage = "sqlite"
+
+[[containers]]
+image = "./dockerfile"
+class_name = "Playwright_v1_62_1"
+name = "Playwright_v1_62_1"
+  [containers.image_vars]
+  PLAYWRIGHT_VERSION = "1.62.1"
+
+[[durable_objects.bindings]]
+name = "PLAYWRIGHT_1_62_1"
+class_name = "Playwright_v1_62_1"
+
+[exports.Playwright_v1_62_1]
+type = "durable-object"
+container = "Playwright_v1_62_1"
+storage = "sqlite"
+
+[[containers]]
+image = "./dockerfile"
+class_name = "Playwright_v1_61_1"
+name = "Playwright_v1_61_1"
+  [containers.image_vars]
+  PLAYWRIGHT_VERSION = "1.61.1"
+
+[[durable_objects.bindings]]
+name = "PLAYWRIGHT_1_61_1"
+class_name = "Playwright_v1_61_1"
+
+[exports.Playwright_v1_61_1]
+type = "durable-object"
+container = "Playwright_v1_61_1"
+storage = "sqlite"
+
+[[containers]]
+image = "./dockerfile"
+class_name = "Playwright_v1_61_0"
+name = "Playwright_v1_61_0"
+  [containers.image_vars]
+  PLAYWRIGHT_VERSION = "1.61.0"
+
+[[durable_objects.bindings]]
+name = "PLAYWRIGHT_1_61_0"
+class_name = "Playwright_v1_61_0"
+
+[exports.Playwright_v1_61_0]
+type = "durable-object"
+container = "Playwright_v1_61_0"
+storage = "sqlite"
+
+[[containers]]
+image = "./dockerfile"
+class_name = "Playwright_v1_60_0"
+name = "Playwright_v1_60_0"
+  [containers.image_vars]
+  PLAYWRIGHT_VERSION = "1.60.0"
+
+[[durable_objects.bindings]]
+name = "PLAYWRIGHT_1_60_0"
+class_name = "Playwright_v1_60_0"
+
+[exports.Playwright_v1_60_0]
+type = "durable-object"
+container = "Playwright_v1_60_0"
+storage = "sqlite"
+
+[[containers]]
+image = "./dockerfile"
+class_name = "Playwright_v1_59_1"
+name = "Playwright_v1_59_1"
+  [containers.image_vars]
+  PLAYWRIGHT_VERSION = "1.59.1"
+
+[[durable_objects.bindings]]
+name = "PLAYWRIGHT_1_59_1"
+class_name = "Playwright_v1_59_1"
+
+[exports.Playwright_v1_59_1]
+type = "durable-object"
+container = "Playwright_v1_59_1"
+storage = "sqlite"
+
+[[containers]]
+image = "./dockerfile"
+class_name = "Playwright_v1_59_0"
+name = "Playwright_v1_59_0"
+  [containers.image_vars]
+  PLAYWRIGHT_VERSION = "1.59.0"
+
+[[durable_objects.bindings]]
+name = "PLAYWRIGHT_1_59_0"
+class_name = "Playwright_v1_59_0"
+
+[exports.Playwright_v1_59_0]
+type = "durable-object"
+container = "Playwright_v1_59_0"
+storage = "sqlite"

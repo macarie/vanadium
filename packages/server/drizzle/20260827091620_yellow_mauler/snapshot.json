@@ -1,0 +1,93 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "id": "0b26026b-aa82-473a-8ba5-52f6c0d59d79",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "name": "users_table",
+      "entityType": "tables"
+    },
+    {
+      "type": "text(22)",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "users_table"
+    },
+    {
+      "type": "text(86)",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "key",
+      "entityType": "columns",
+      "table": "users_table"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "name",
+      "entityType": "columns",
+      "table": "users_table"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "createdAt",
+      "entityType": "columns",
+      "table": "users_table"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "expiration",
+      "entityType": "columns",
+      "table": "users_table"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "revoked",
+      "entityType": "columns",
+      "table": "users_table"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "users_table_pk",
+      "table": "users_table",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "key"
+      ],
+      "nameExplicit": false,
+      "name": "users_table_key_unique",
+      "entityType": "uniques",
+      "table": "users_table"
+    }
+  ],
+  "renames": []
+}

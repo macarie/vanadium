@@ -1,0 +1,10 @@
+ARG PLAYWRIGHT_VERSION
+
+FROM mcr.microsoft.com/playwright:v${PLAYWRIGHT_VERSION}
+
+EXPOSE 3000
+
+USER pwuser
+WORKDIR /home/pwuser
+
+# RUN npx -y playwright@${PLAYWRIGHT_VERSION} run-server --port 3000 --host 0.0.0.0
